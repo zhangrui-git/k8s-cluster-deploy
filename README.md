@@ -1,7 +1,7 @@
 kubernetes二进制部署笔记  
 最后更新：2024-03-06
 
-# 集群节点配置
+# 节点基础环境配置
 关闭防火墙，关闭swap，关闭selinux  
 
 允许iptables检查桥接流量  
@@ -22,7 +22,7 @@ systemctl enable chronyd
 systemctl status chronyd
 ```
 
-|HostName|IP|组件|OS|
+|HostName|IP|Component|OS|
 |---|---|---|---|
 |k8s-master|172.17.17.2/16|apiserver, controller-manager, scheduler, etcd|CentOS Linux release 7.9|
 |k8s-node-1|172.17.17.3/16|kubelet, kube-proxy, docker|CentOS Linux release 7.9|
