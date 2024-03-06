@@ -174,6 +174,7 @@ ln -s /opt/kubernetes/bin/kubectl /usr/bin/kubectl
 
 ## apiserver
 ### apiserver.conf
+[选项](https://kubernetes.io/zh-cn/docs/reference/command-line-tools-reference/kube-apiserver/)
 ```ini
 KUBE_APISERVER_OPTS="
 --v=2 
@@ -276,6 +277,7 @@ systemctl status kube-apiserver
 
 ## controller-manager
 ### controller-manager.conf
+[选项](https://kubernetes.io/zh-cn/docs/reference/command-line-tools-reference/kube-controller-manager/)
 ```ini
 KUBE_CONTROLLER_MANAGER_OPTS="
 --v=2 
@@ -345,6 +347,7 @@ systemctl status kube-controller-manager
 
 ## scheduler
 ### scheduler.conf
+[选项](https://kubernetes.io/zh-cn/docs/reference/command-line-tools-reference/kube-scheduler/)
 ```ini
 KUBE_SCHEDULER_OPTS="
 --v=2 
@@ -503,6 +506,7 @@ ln -s /opt/kubernetes/bin/kubectl /usr/bin/kubectl
 ```
 ## kubelet
 ### kubelet.conf
+[选项](https://kubernetes.io/zh-cn/docs/reference/command-line-tools-reference/kubelet/)
 ```ini
 KUBELET_OPTS="
 --v=2 
@@ -514,7 +518,7 @@ KUBELET_OPTS="
 --pod-infra-container-image=kubernetes/pause
 "
 ```
-### kubelet-config.yaml
+### kubelet-config.yml
 [KubeletConfiguration](https://kubernetes.io/zh-cn/docs/reference/config-api/kubelet-config.v1beta1/#kubelet-config-k8s-io-v1beta1-KubeletConfiguration)
 ```yaml
 kind: KubeletConfiguration
@@ -592,6 +596,7 @@ kubectl get node
 # k8s-node-2   Ready    <none>   21m   v1.29.2
 ```
 ## kube-proxy
+[选项](https://kubernetes.io/zh-cn/docs/reference/command-line-tools-reference/kube-proxy/)
 ### kube-proxy-config.yml
 [KubeProxyConfiguration](https://kubernetes.io/zh-cn/docs/reference/config-api/kube-proxy-config.v1alpha1/#kubeproxy-config-k8s-io-v1alpha1-KubeProxyConfiguration)
 ```yaml
@@ -644,7 +649,7 @@ kubectl config use-context default --kubeconfig=${KUBE_CONFIG}
 Description=Kubernetes Proxy
 After=network.target
 [Service]
-ExecStart=/opt/kubernetes/bin/kube-proxy --v=2 --config=/opt/kubernetes/cfg/kube-proxy.yaml
+ExecStart=/opt/kubernetes/bin/kube-proxy --v=2 --config=/opt/kubernetes/cfg/kube-proxy.yml
 Restart=on-failure
 LimitNOFILE=65536
 [Install]
