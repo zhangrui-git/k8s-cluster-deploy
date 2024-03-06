@@ -1,0 +1,9 @@
+[Unit]
+Description=Kubernetes Proxy
+After=network.target
+[Service]
+ExecStart=/opt/kubernetes/bin/kube-proxy --v=2  --kubeconfig=/opt/kubernetes/cfg/kube-proxy.kubeconfig --config=/opt/kubernetes/cfg/kube-proxy-config.yml
+Restart=on-failure
+LimitNOFILE=65536
+[Install]
+WantedBy=multi-user.target

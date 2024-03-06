@@ -1,0 +1,8 @@
+[Unit]
+Description=Kubernetes Scheduler
+[Service]
+EnvironmentFile=/opt/kubernetes/cfg/scheduler.conf
+ExecStart=/opt/kubernetes/bin/kube-scheduler $KUBE_SCHEDULER_OPTS
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target

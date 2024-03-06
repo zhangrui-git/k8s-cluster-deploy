@@ -1,0 +1,17 @@
+{
+    "CN": "kube-scheduler",
+    "hosts": [],
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "C": "CN",
+            "ST": "Beijing",
+            "L": "Beijing",
+            "O": "system:masters",
+            "OU": "system"
+        }
+    ]
+}

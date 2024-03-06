@@ -1,0 +1,8 @@
+[Unit]
+Description=Kubernetes Controller Manager
+[Service]
+EnvironmentFile=/opt/kubernetes/cfg/controller-manager.conf
+ExecStart=/opt/kubernetes/bin/kube-controller-manager $KUBE_CONTROLLER_MANAGER_OPTS
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
