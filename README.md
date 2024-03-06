@@ -466,7 +466,8 @@ cp ./usr/local/bin/* /usr/local/bin
 cp -r ./opt/* /opt
 ```
 导出配置模板
-配置比较复杂比较多
+配置比较复杂比较多  
+[config.toml](https://github.com/containerd/containerd/blob/main/docs/man/containerd-config.toml.5.md)
 ```shell
 containerd config default > /etc/containerd/config.toml
 ```
@@ -509,6 +510,7 @@ KUBELET_OPTS="
 "
 ```
 ### kubelet-config.yaml
+[KubeletConfiguration](https://kubernetes.io/zh-cn/docs/reference/config-api/kubelet-config.v1beta1/#kubelet-config-k8s-io-v1beta1-KubeletConfiguration)
 ```yaml
 kind: KubeletConfiguration
 apiVersion: kubelet.config.k8s.io/v1beta1
@@ -586,6 +588,7 @@ kubectl get node
 ```
 ## kube-proxy
 ### kube-proxy-config.yml
+[KubeProxyConfiguration](https://kubernetes.io/zh-cn/docs/reference/config-api/kube-proxy-config.v1alpha1/#kubeproxy-config-k8s-io-v1alpha1-KubeProxyConfiguration)
 ```yaml
 kind: KubeProxyConfiguration
 apiVersion: kubeproxy.config.k8s.io/v1alpha1
