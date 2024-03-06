@@ -48,6 +48,11 @@ cfssl, cfssljson, cfssl-certinfo
 kubernetes组件：https://kubernetes.io/zh-cn/releases/download/  
 kubectl, kube-apiserver, kube-controller-manager, kube-scheduler, kubelet, kube-proxy
 
+runc: https://github.com/opencontainers/runc/releases
+
+containerd: https://github.com/containerd/containerd/releases
+
+
 # etcd安装
 ### 安装路径 
 程序 `/opt/etcd/bin`  
